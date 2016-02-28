@@ -19,9 +19,11 @@ def beginfizz():
     # Get the digit pressed by the user
     digit_pressed = request.values.get('Digits', None) # returns a string
     resp = twilio.twiml.Response()
+    resp.say(digit_pressed)
 
     try:
         digit_pressed = int(digit_pressed)
+        resp.say("tried to create the create the input to an integer")
     except:
         resp.say("Sorry, that's not a real number.")
         return redirect("/")
