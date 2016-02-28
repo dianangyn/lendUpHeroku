@@ -8,7 +8,7 @@ def phoneFizz():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello.")
-    with resp.gather(finishOnKey="#", action="/beginfizz", method="POST") as g:
+    with resp.gather(finishOnKey="#",numDigits=2, action="/beginfizz", method="POST") as g:
         g.say("Let's play PhoneFizz. Enter a number then press pound.")
 
     return str(resp)
