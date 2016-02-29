@@ -20,7 +20,7 @@ def beginfizz():
     digit_pressed = request.values.get('Digits', None) # returns a string
     resp = twilio.twiml.Response()
     resp.say(digit_pressed)
-
+"""
     try:
         digit_pressed = int(digit_pressed)
         resp.say("tried to create the create the input to an integer")
@@ -28,7 +28,8 @@ def beginfizz():
         resp.say("Sorry, that's not a real number.")
         return redirect("/")
     # catch non number responses
-    if digit_pressed == 0:
+"""
+    if digit_pressed == "0":
         resp.say("Sorry, please enter a number within the range.")
         return redirect("/")
 
