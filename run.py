@@ -9,7 +9,7 @@ def phoneFizz():
     resp = twilio.twiml.Response()
     resp.say("Hello.")
     with resp.gather(numDigits=2, action="/beginfizz", method="POST") as g:
-        g.say("Let's play PhoneFizz. Enter a number then press pound.")
+        g.say("Let's play PhoneFizz. Enter a number.")
 
     return str(resp)
 
@@ -17,8 +17,8 @@ def phoneFizz():
 def beginfizz():
     """Handle key press from a user."""
     # Get the digit pressed by the user
-    digit_pressed = request.values.get('Digits', None) # returns a string
     resp = twilio.twiml.Response()
+    digit_pressed = request.form['Digits'] # returns a string
     resp.say(digit_pressed)
     '''
     try:
@@ -32,9 +32,9 @@ def beginfizz():
     if digit_pressed == "0":
         resp.say("Sorry, please enter a number within the range.")
         return redirect("/")
-
-    for x in range(1,digit_pressed):
-        playfizz(x)
+    else:
+        for x in range(1,int(digit_pressed)):
+            playfizz(x)
 
     return str(resp)
 
