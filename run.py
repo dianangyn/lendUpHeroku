@@ -8,13 +8,13 @@ app = Flask(__name__)
 def phoneFizz():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
-    resp.say("Hello.")
-    with resp.gather(finishOnKey="*", action="/beginfizz", method="POST") as g:
-        g.say("Let's play PhoneFizz. Enter a number then press star.")
+    resp.say("Hello. Let's play PhoneFizz. Enter a number then press star.")
+    resp.gather(finishOnKey="*", action="/beginfizz", method="POST")
+    print(resp)
     return str(resp)
 
 
-@app.route("/beginfizz", methods=['GET', 'POST'])
+@app.route("/beginfizz", methods=['POST'])
 def beginfizz():
     """Handle key press from a user."""
     # Get the digit pressed by the user
