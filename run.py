@@ -3,23 +3,24 @@ import twilio.twiml
 
 app = Flask(__name__)
 
+
 @app.route("/", methods=['GET', 'POST'])
 def phoneFizz():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello.")
-    with resp.gather(numDigits=2, action="/beginfizz", method="POST") as g:
-        g.say("Let's play PhoneFizz. Enter a number.")
-
+    with resp.gather(finishOnKey="*", action="/beginfizz", method="POST") as g:
+        g.say("Let's play PhoneFizz. Enter a number then press star.")
     return str(resp)
+
 
 @app.route("/beginfizz", methods=['GET', 'POST'])
 def beginfizz():
     """Handle key press from a user."""
     # Get the digit pressed by the user
     resp = twilio.twiml.Response()
-    digit_pressed = request.form['Digits'] # returns a string
-    resp.say(digit_pressed)
+    resp.say("beginning of the game")
+    digit_pressed = request.form['Digits']  # returns a string
     '''
     try:
         digit_pressed = int(digit_pressed)
@@ -33,10 +34,11 @@ def beginfizz():
         resp.say("Sorry, please enter a number within the range.")
         return redirect("/")
     else:
-        for x in range(1,int(digit_pressed)):
+        for x in range(1, int(digit_pressed)):
             playfizz(x)
 
     return str(resp)
+
 
 def playfizz(currentNum):
     if currentNum % 3 == 0:
@@ -45,6 +47,7 @@ def playfizz(currentNum):
         resp.say("Buzz")
     else:
         resp.say(currentNum)
+
 
 if __name__ == "__main__":
     app.run(debug=True)
