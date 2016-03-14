@@ -8,32 +8,37 @@ def menu():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
-    with resp.gather(action="/beginfizz", method="POST") as g:
+    with resp.gather(finishOnKey='#', action="/beginfizz", method="POST") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
     return str(resp)
+
 
 @app.route("/beginfizz", methods=['GET', 'POST'])
 def beginfizz():
     """Handle key press from a user."""
-    digit_pressed = request.form['Digits']
+    digit_pressed = request.values.get('Digits', None)
     resp = twilio.twiml.Response()
     resp.say("beginning of the game")
     if digit_pressed == "0":
         resp.say("Sorry, please enter a number within the range.")
         return redirect("/")
     else:
-        return phonefizz(digit_pressed)
+        return phoneFizz(digit_pressed)
     return str(resp)
 
-def _give_instructions(response):
-    response.say("To play phonefizz, enter a number on your number pad." +
-                 "Our game will return the phonefizz response for your number",
-                 voice="alice", language="en-GB")
 
-    response.say("Thank you for playing.")
-
-    response.hangup()
-    return response
+def phoneFizz(input):
+    output = ""
+    for x in range(1, input+1):
+        if x % 5 == 0 and x % 3 == 0:
+            output += ("fizzbuzz ")
+        elif x % 5 == 0:
+            output += ("fizz ")
+        elif x % 3 == 0:
+            output += ("buzz ")
+        else:
+            output += str(x)+" "
+    return output
 
 
 def _play_phonefizz(reponse):
@@ -41,13 +46,6 @@ def _play_phonefizz(reponse):
         g.say("Please enter a number to play phonefizz ",
               voice="alice", language="en-GB", loop=2)
     return response
-
-def _redirect_menu():
-    response = twilio.twiml.Response()
-    response.redirect(url_for('menu'))
-
-    return twiml(response)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
