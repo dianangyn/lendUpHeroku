@@ -3,17 +3,10 @@ import twilio.twiml
 
 app = Flask(__name__)
 
-@app.route('/')
-def home():
-    resp = twilio.twiml.Response()
-    resp.say("Hello. Let's play PhoneFizz. Enter a number then press star.")
-    return _redirect_menu()
-
-
-@app.route("/menu", methods=['POST'])
+@app.route("/", methods=['POST'])
 def menu():
     """Respond to incoming requests."""
-
+    resp.say("Hello. Let's play PhoneFizz. Enter a number then press star.")
     selected_option = request.form['Digits']
     option_actions = {'1': _give_instructions,
                       '2': _play_phonefizz}
