@@ -8,7 +8,7 @@ def menu():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
-    with resp.gather(numDigits=1, action="/hello", method="POST") as g:
+    with resp.gather(numDigits=1, action="/hello") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
     return str(resp)
 
@@ -16,8 +16,8 @@ def menu():
 def handle_key():
     """Handle key press from a user."""
     # Get the digit pressed by the user
-    digit_pressed = request.values.get('Digits', None)
-    if digit_pressed == 1:
+    digit_pressed = request.form['Digits'] # returns a string
+    if digit_pressed == "1":
         resp = twilio.twiml.Response()
         resp.say("Thank you for pressing 1. Goodbye.")
         return str(resp)
