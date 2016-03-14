@@ -6,6 +6,7 @@ app = Flask(__name__)
 @app.route("/", methods=['POST'])
 def menu():
     """Respond to incoming requests."""
+    resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz. Enter a number then press pound.")
     return __play_phonefizz()
 
