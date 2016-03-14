@@ -7,7 +7,7 @@ app = Flask(__name__)
 def home():
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz. Enter a number then press star.")
-    return str(resp)
+    return _redirect_menu()
 
 
 @app.route("/menu", methods=['POST'])
@@ -57,7 +57,6 @@ def _play_phonefizz(reponse):
 
 def _redirect_menu():
     response = twilio.twiml.Response()
-    response.say("Returning to the main menu", voice="alice", language="en-GB")
     response.redirect(url_for('menu'))
 
     return twiml(response)
