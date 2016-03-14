@@ -7,15 +7,10 @@ app = Flask(__name__)
 def menu():
     """Respond to incoming requests."""
     resp.say("Hello. Let's play PhoneFizz. Enter a number then press star.")
-    selected_option = request.form['Digits']
-    option_actions = {'1': _give_instructions,
-                      '2': _play_phonefizz}
-
-    if option_actions.has_key(selected_option):
-        response = twilio.twiml.Response()
-        option_actions[selected_option](response)
-        return twiml(response)
-    return _redirect_menu()
+    with response.gather(action=url_for('beginfizz'), method="POST") as g:
+        g.say("Please enter a number to play phonefizz ",
+              voice="alice", language="en-GB", loop=2)
+    return response
 
 
 @app.route("/beginfizz", methods=['POST'])
