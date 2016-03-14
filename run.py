@@ -8,7 +8,7 @@ def menu():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
-    with resp.gather(finishOnKey='#', action="/hello", method="POST") as g:
+    with resp.gather(numDigits=1, action="/hello", method="POST") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
     return str(resp)
 
