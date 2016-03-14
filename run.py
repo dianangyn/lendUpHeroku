@@ -8,9 +8,24 @@ def menu():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
-    with resp.gather(finishOnKey='#', action="/beginfizz", method="POST") as g:
+    with resp.gather(finishOnKey='#', action="/hello", method="POST") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
     return str(resp)
+
+@app.route("/hello", methods=['GET', 'POST'])
+def handle_key():
+    """Handle key press from a user."""
+
+    # Get the digit pressed by the user
+    digit_pressed = request.values.get('Digits', None)
+    if digit_pressed == "1":
+        resp = twilio.twiml.Response()
+        resp.say("Thank you for pressing 1. Goodbye.")
+        return str(resp)
+    # If the caller pressed anything but 1, redirect them to the homepage.
+    else:
+        return redirect("/")
+
 
 
 @app.route("/beginfizz", methods=['GET', 'POST'])
