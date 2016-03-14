@@ -10,10 +10,9 @@ def menu():
     resp.say("Hello. Let's play PhoneFizz.")
     with resp.gather(action="/beginfizz", method="POST") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
-
     return str(resp)
 
-@app.route("/beginfizz", methods=['POST'])
+@app.route("/beginfizz", methods=['GET', 'POST'])
 def beginfizz():
     """Handle key press from a user."""
     digit_pressed = request.form['Digits']
