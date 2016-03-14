@@ -4,13 +4,10 @@ import twilio.twiml
 app = Flask(__name__)
 
 @app.route("/", methods=['POST'])
-def menu(response):
+def menu():
     """Respond to incoming requests."""
     resp.say("Hello. Let's play PhoneFizz. Enter a number then press pound.")
-    with response.gather(action=url_for('beginfizz'), method="POST") as g:
-        g.say("Please enter a number to play phonefizz ",
-              voice="alice", language="en-GB", loop=2)
-    return resp
+    return __play_phonefizz()
 
 
 @app.route("/beginfizz", methods=['POST'])
