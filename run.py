@@ -15,10 +15,9 @@ def menu():
 @app.route("/hello", methods=['GET', 'POST'])
 def handle_key():
     """Handle key press from a user."""
-
     # Get the digit pressed by the user
     digit_pressed = request.values.get('Digits', None)
-    if digit_pressed == "1":
+    if digit_pressed == 1:
         resp = twilio.twiml.Response()
         resp.say("Thank you for pressing 1. Goodbye.")
         return str(resp)
