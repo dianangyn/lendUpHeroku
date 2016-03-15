@@ -1,4 +1,4 @@
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, url_for
 import twilio.twiml
 
 app = Flask(__name__)
@@ -8,13 +8,15 @@ def menu():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
-    with resp.gather(numDigits=1, action="/hello") as g:
+    with resp.gather(finishOnKey="#", action="/beginfizz") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
     return str(resp)
 
+
+"""
 @app.route("/hello", methods=['GET', 'POST'])
 def handle_key():
-    """Handle key press from a user."""
+    #Handle key press from a user.
     # Get the digit pressed by the user
     digit_pressed = request.form['Digits'] # returns a string
     if digit_pressed == "1":
@@ -24,20 +26,19 @@ def handle_key():
     # If the caller pressed anything but 1, redirect them to the homepage.
     else:
         return redirect("/")
-
+"""
 
 
 @app.route("/beginfizz", methods=['GET', 'POST'])
 def beginfizz():
     """Handle key press from a user."""
-    digit_pressed = request.values.get('Digits', None)
+    digit_pressed = request.form['Digits'] # returns a string
     resp = twilio.twiml.Response()
-    resp.say("beginning of the game")
     if digit_pressed == "0":
         resp.say("Sorry, please enter a number within the range.")
         return redirect("/")
     else:
-        return phoneFizz(digit_pressed)
+        resp.say(phoneFizz(int(digit_pressed)))
     return str(resp)
 
 
@@ -55,7 +56,7 @@ def phoneFizz(input):
     return output
 
 
-def _play_phonefizz(reponse):
+def _play_phonefizz(response):
     with response.gather(action=url_for('beginfizz'), method="POST") as g:
         g.say("Please enter a number to play phonefizz ",
               voice="alice", language="en-GB", loop=2)
