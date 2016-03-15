@@ -13,22 +13,21 @@ auth_token = "575f13c3c92ec55501ed32e1776c5184"
 client = TwilioRestClient(account_sid, auth_token)"""
 
 
-@app.route("/", methods=['POST'])
-def menu():
+@app.route("/", methods=['GET', 'POST'])
+def home():
     """Respond to incoming requests."""
+    form = webFizzForm()
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
     with resp.gather(finishOnKey="#", action="/beginfizz") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
-    return str(resp)
+    return render_template('webfizz.html', form = form, reponse=str(resp))
 
-
+"""
 @app.route("/", methods =['GET'])
 def home():
-    form = webFizzForm()
-    return render_template('webfizz.html', form = form)
-
-
+    return
+"""
 
 @app.route("/beginfizz", methods=['GET', 'POST'])
 def beginfizz():
