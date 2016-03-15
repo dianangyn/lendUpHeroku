@@ -4,12 +4,14 @@ from .forms import webFizzForm
 
 app = Flask(__name__)
 
+"""
 from twilio.rest import TwilioRestClient
 
 # Get these credentials from http://twilio.com/user/account
 account_sid = "ACd31f04c5fd89bf0fd1a52a36bcb9b50c"
 auth_token = "575f13c3c92ec55501ed32e1776c5184"
-client = TwilioRestClient(account_sid, auth_token)
+client = TwilioRestClient(account_sid, auth_token)"""
+
 
 @app.route("/", methods=['POST'])
 def menu():
@@ -20,27 +22,12 @@ def menu():
         g.say("Please enter a number to play phonefizz then pressed pound.")
     return str(resp)
 
-@app.route("/home")
+
+@app.route("/", methods =['GET'])
 def home():
     form = webFizzForm()
     return render_template('webfizz.html', form = form)
 
-
-
-"""
-@app.route("/hello", methods=['GET', 'POST'])
-def handle_key():
-    #Handle key press from a user.
-    # Get the digit pressed by the user
-    digit_pressed = request.form['Digits'] # returns a string
-    if digit_pressed == "1":
-        resp = twilio.twiml.Response()
-        resp.say("Thank you for pressing 1. Goodbye.")
-        return str(resp)
-    # If the caller pressed anything but 1, redirect them to the homepage.
-    else:
-        return redirect("/")
-"""
 
 
 @app.route("/beginfizz", methods=['GET', 'POST'])
