@@ -1,16 +1,18 @@
-from flask import Flask, request, redirect, url_for
+from flask import Flask, request, redirect, url_for, render_template
 import twilio.twiml
+from .forms import webFizzForm
 
 app = Flask(__name__)
 
 @app.route("/", methods=['POST'])
 def menu():
+    form = webFizzForm()
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
     with resp.gather(finishOnKey="#", action="/beginfizz") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
-    return str(resp)
+    return render_template('webfizz.html', form=form)
 
 
 """
