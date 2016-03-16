@@ -1,33 +1,25 @@
 from flask import Flask, request, redirect, url_for, render_template
 import twilio.twiml
-from .forms import webFizzForm
+import re
+from twilio.util import TwilioCapability
+from twilio.rest import TwilioRestClient
+from forms import webFizzForm
 
 app = Flask(__name__)
 
-"""
-from twilio.rest import TwilioRestClient
-
-# Get these credentials from http://twilio.com/user/account
-account_sid = "ACd31f04c5fd89bf0fd1a52a36bcb9b50c"
-auth_token = "575f13c3c92ec55501ed32e1776c5184"
-client = TwilioRestClient(account_sid, auth_token)"""
+default_client = "friend"
+caller_id = "+17606426823"
 
 
-@app.route("/", methods=['GET', 'POST'])
+@app.route("/", methods=['POST'])
 def home():
     """Respond to incoming requests."""
-    form = webFizzForm()
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
     with resp.gather(finishOnKey="#", action="/beginfizz") as g:
         g.say("Please enter a number to play phonefizz then pressed pound.")
-    return render_template('webfizz.html', form = form, reponse=str(resp))
+    return str(resp)
 
-"""
-@app.route("/", methods =['GET'])
-def home():
-    return
-"""
 
 @app.route("/beginfizz", methods=['GET', 'POST'])
 def beginfizz():
@@ -56,29 +48,40 @@ def phoneFizz(input):
     return output
 
 
-def _play_phonefizz(response):
-    with response.gather(action=url_for('beginfizz'), method="POST") as g:
-        g.say("Please enter a number to play phonefizz ",
-              voice="alice", language="en-GB", loop=2)
-    return response
-
-
 @app.route("/webfizz", methods=['GET', 'POST'])
 def webfizz():
-    to_call = request.form['phonenumber']
+    account_sid = "ACd31f04c5fd89bf0fd1a52a36bcb9b50c"
+    auth_token = "575f13c3c92ec55501ed32e1776c5184"
+    capability = TwilioCapability(account_sid, auth_token)
+    application_sid = "AP9087308355771954b1a49f4e9c9636ca"
+
+    capability.allow_client_outgoing(application_sid)
+    capability.allow_client_incoming("friend")
+    token = capability.generate()
+
+    return render_template('webfizz.html', token=token, form=webFizzForm)
+
+
+@app.route('/dial', methods=['GET', 'POST'])
+def dial():
+    dest_number = request.form['phonenumber']
     resp = twilio.twiml.Response()
-    if to_call == "":
+    if dest_number == "":
         resp.say("Sorry, please enter a phone number.")
         return redirect("/")
     else:
-        call = client.calls.create(to=to_call,
-                           from_="+17606426823",
-                           url="/beginfizz")
+        with resp.dial(callerId=caller_id) as r:
+            # If we have a number, and it looks like a phone number:
+            if dest_number and re.search('^[\d\(\)\- \+]+$', dest_number):
+                r.number(dest_number)
+            else:
+                r.client(dest_number)
+
     return str(resp)
 
-# Make the call
-
-print call.sid
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+"""
+"""
