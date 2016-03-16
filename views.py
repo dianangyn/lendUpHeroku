@@ -8,26 +8,9 @@ from forms import webFizzForm
 app = Flask(__name__)
 caller_id = "+17606426823"
 
-"""
-default_client = "friend"
-
-@app.route("/", methods=['GET', 'POST'])
-def webfizz():
-    account_sid = "ACd31f04c5fd89bf0fd1a52a36bcb9b50c"
-    auth_token = "575f13c3c92ec55501ed32e1776c5184"
-    capability = TwilioCapability(account_sid, auth_token)
-    application_sid = "AP9087308355771954b1a49f4e9c9636ca"
-
-    capability.allow_client_outgoing(application_sid)
-    capability.allow_client_incoming("friend")
-    token = capability.generate()
-
-    return render_template('webfizz.html', token=token, form=webFizzForm)
-"""
-
 
 @app.route("/", methods=['POST'])
-def phone():
+def home():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
