@@ -32,7 +32,7 @@ def beginfizz():
 
 @app.route("/webfizz", methods=['GET', 'POST'])
 def webfizz():
-    return render_template('webfizz.html')
+    return render_template('/static/webfizz.html')
 
 
 def phonefizz(inp):
