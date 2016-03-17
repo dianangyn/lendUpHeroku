@@ -5,7 +5,7 @@ from forms import webFizzForm
 app = Flask(__name__)
 
 
-@app.route("/", methods=['POST'])
+@app.route("/", methods=['GET','POST'])
 def home():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
@@ -28,11 +28,6 @@ def beginfizz():
     return str(resp)
 
 
-@app.route("/webfizz", methods=['GET', 'POST'])
-def webfizz():
-    return render_template('/webfizz.html', form=webFizzForm)
-
-
 def phonefizz(inp):
     output = ""
     for x in range(1, inp+1):
@@ -45,24 +40,6 @@ def phonefizz(inp):
         else:
             output += str(x)+" "
     return output
-
-
-"""@app.route('/dial', methods=['GET', 'POST'])
-def dial():
-    dest_number = request.form['phonenumber']
-    resp = twilio.twiml.Response()
-    if dest_number == "":
-        resp.say("Sorry, please enter a phone number.")
-        return redirect("/")
-    else:
-        with resp.dial(callerId=caller_id) as r:
-            # If we have a number, and it looks like a phone number:
-            if dest_number and re.search('^[\d\(\)\- \+]+$', dest_number):
-                r.number(dest_number)
-            else:
-                resp.say("Sorry, that is an invalid number.")
-
-    return str(resp)"""
 
 
 if __name__ == "__main__":
