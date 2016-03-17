@@ -2,127 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5af9ff6-4c77-4908-94c5-0d50bca5ce04" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip-7.1.2.dist-info/DESCRIPTION.rst" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip-7.1.2.dist-info/METADATA" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip-7.1.2.dist-info/RECORD" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip-7.1.2.dist-info/WHEEL" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip-7.1.2.dist-info/entry_points.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip-7.1.2.dist-info/metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip-7.1.2.dist-info/pbr.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip-7.1.2.dist-info/top_level.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/compat.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/compat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/controller.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/controller.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/heuristics.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/heuristics.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/serialize.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/cachecontrol/serialize.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/ansi.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/ansi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/ansitowin32.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/ansitowin32.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/initialise.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/initialise.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/win32.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/win32.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/winterm.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/colorama/winterm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/compat.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/compat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/database.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/database.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/locators.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/locators.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/metadata.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/metadata.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/resources.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/resources.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/scripts.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/scripts.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/util.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/util.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/version.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/version.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/wheel.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/distlib/wheel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/html5lib/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/html5lib/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/html5lib/sanitizer.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/html5lib/sanitizer.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/html5lib/treewalkers/etree.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/html5lib/treewalkers/etree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/ipaddress.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/ipaddress.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/linklockfile.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/linklockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/mkdirlockfile.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/mkdirlockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/pidlockfile.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/pidlockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/sqlitelockfile.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/sqlitelockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/symlinklockfile.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/lockfile/symlinklockfile.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/__about__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/__about__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/_compat.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/_compat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/_structures.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/_structures.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/specifiers.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/specifiers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/version.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/packaging/version.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/pkg_resources/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/pkg_resources/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/progress/bar.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/progress/bar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/progress/counter.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/progress/counter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/progress/helpers.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/progress/helpers.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/progress/spinner.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/progress/spinner.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/adapters.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/adapters.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/api.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/auth.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/auth.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/cacert.pem" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/cacert.pem" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/cookies.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/cookies.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/exceptions.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/exceptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/hooks.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/hooks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/models.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/_collections.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/_collections.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/connection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/connectionpool.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/connectionpool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/ntlmpool.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/contrib/pyopenssl.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/exceptions.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/exceptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/fields.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/fields.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/filepost.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/filepost.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/packages/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/packages/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/poolmanager.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/poolmanager.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/request.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/request.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/response.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/response.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/connection.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/connection.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/request.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/request.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/response.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/response.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/retry.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/retry.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/ssl_.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/timeout.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/timeout.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/url.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/packages/urllib3/util/url.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/sessions.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/sessions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/status_codes.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/status_codes.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/utils.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/requests/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/six.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/_vendor/six.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/basecommand.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/basecommand.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/cmdoptions.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/cmdoptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/completion.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/completion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/freeze.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/freeze.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/install.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/install.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/list.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/list.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/search.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/search.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/show.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/show.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/wheel.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/commands/wheel.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/compat/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/compat/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/download.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/download.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/exceptions.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/exceptions.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/index.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/index.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/locations.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/locations.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/operations/freeze.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/operations/freeze.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/pep425tags.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/pep425tags.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/req/req_file.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/req/req_file.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/req/req_install.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/req/req_install.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/req/req_set.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/req/req_set.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/req/req_uninstall.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/req/req_uninstall.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/appdirs.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/appdirs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/deprecation.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/deprecation.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/logging.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/logging.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/outdated.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/outdated.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/ui.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/utils/ui.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/__init__.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/bazaar.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/bazaar.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/git.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/git.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/mercurial.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/mercurial.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/subversion.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/vcs/subversion.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/wheel.py" afterPath="$PROJECT_DIR$/lib/python2.7/site-packages/pip/wheel.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <ignored path="lendup.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -143,14 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66466165">
+            <state vertical-scroll-proportion="0.0">
               <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.07669173">
+              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -200,6 +90,7 @@
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/forms.py" />
         <option value="$PROJECT_DIR$/views.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -563,21 +454,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07669173">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66466165">
+        <state vertical-scroll-proportion="0.0">
           <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07669173">
+          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
