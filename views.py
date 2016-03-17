@@ -1,12 +1,8 @@
-from flask import Flask, request, redirect, url_for, render_template
+from flask import Flask, request, redirect, render_template
 import twilio.twiml
-import re
-from twilio.util import TwilioCapability
-from twilio.rest import TwilioRestClient
 from forms import webFizzForm
 
 app = Flask(__name__)
-caller_id = "+17606426823"
 
 
 @app.route("/", methods=['POST'])
@@ -22,13 +18,13 @@ def home():
 @app.route("/beginfizz", methods=['GET', 'POST'])
 def beginfizz():
     """Handle key press from a user."""
-    digit_pressed = request.form['Digits'] # returns a string
+    digit_pressed = request.form['Digits']  # returns a string
     resp = twilio.twiml.Response()
     if digit_pressed == "0":
         resp.say("Sorry, please enter a number within the range.")
         return redirect("/")
     else:
-        resp.say(phoneFizz(int(digit_pressed)))
+        resp.say(phonefizz(int(digit_pressed)))
     return str(resp)
 
 
@@ -36,21 +32,22 @@ def beginfizz():
 def webfizz():
     return render_template('/webfizz.html', form=webFizzForm)
 
-def phoneFizz(input):
+
+def phonefizz(inp):
     output = ""
-    for x in range(1, input+1):
+    for x in range(1, inp+1):
         if x % 5 == 0 and x % 3 == 0:
-            output += ("fizzbuzz ")
+            output += "fizzbuzz "
         elif x % 5 == 0:
-            output += ("fizz ")
+            output += "fizz "
         elif x % 3 == 0:
-            output += ("buzz ")
+            output += "buzz "
         else:
             output += str(x)+" "
     return output
 
 
-@app.route('/dial', methods=['GET', 'POST'])
+"""@app.route('/dial', methods=['GET', 'POST'])
 def dial():
     dest_number = request.form['phonenumber']
     resp = twilio.twiml.Response()
@@ -65,11 +62,8 @@ def dial():
             else:
                 resp.say("Sorry, that is an invalid number.")
 
-    return str(resp)
+    return str(resp)"""
 
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-"""
-"""
