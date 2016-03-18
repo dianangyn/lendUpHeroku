@@ -1,19 +1,21 @@
-from flask import Flask, request, redirect, render_template
+from flask import Flask, request, redirect, render_template, url_for, jsonify
 import twilio.twiml
-import re
-from forms import webFizzForm
+from forms import PhoneForm
+from twilio.rest import TwilioRestClient
+
 
 app = Flask(__name__)
-caller_id = "+17606426823"
+WTF_CSRF_ENABLED = True
+app.config.from_pyfile('config.py')
 
 
-@app.route("/", methods=['GET','POST'])
+@app.route("/home", methods=['GET','POST'])
 def home():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
     resp.say("Hello. Let's play PhoneFizz.")
     with resp.gather(finishOnKey="#", action="/beginfizz") as g:
-        g.say("Please enter a number to play phonefizz then pressed pound.")
+        g.say("Please enter a number to play phonefizz then press pound.")
     return str(resp)
 
 
@@ -32,7 +34,7 @@ def beginfizz():
 
 @app.route("/webfizz", methods=['GET', 'POST'])
 def webfizz():
-    return render_template('/static/webfizz.html')
+    return render_template('/web.html', form=PhoneForm)
 
 
 def phonefizz(inp):
@@ -49,22 +51,26 @@ def phonefizz(inp):
     return output
 
 
-@app.route('/dial', methods=['GET', 'POST'])
-def dial():
-    dest_number = request.form['phonenumber']
-    resp = twilio.twiml.Response()
-    if dest_number == "":
-        resp.say("Sorry, please enter a phone number.")
-        return redirect("/")
-    else:
-        with resp.dial(callerId=caller_id) as r:
-            # If we have a number, and it looks like a phone number:
-            if dest_number and re.search('^[\d\(\)\- \+]+$', dest_number):
-                r.number(dest_number)
-            else:
-                resp.say("Sorry, that is an invalid number.")
+@app.route('/dial', methods=['POST'])
+def web_dial():
+    phone_number = '+18586108538'
+    print phone_number
+    try:
+        twilio_client = TwilioRestClient(app.config['TWILIO_ACCOUNT_SID'],
+                                         app.config['TWILIO_AUTH_TOKEN'])
+    except Exception as e:
+        msg = 'Missing configuration variable: {0}'.format(e)
+        return jsonify({'error': msg})
+    try:
+        twilio_client.calls.create(from_=app.config['TWILIO_CALLER_ID'],
+                                   to=phone_number,
+                                   url=url_for('home',
+                                               _external=True))
+    except Exception as e:
+        app.logger.error(e)
+        return jsonify({'error': str(e)})
 
-    return str(resp)
+    return jsonify({'message': 'Call incoming!'})
 
 
 if __name__ == "__main__":

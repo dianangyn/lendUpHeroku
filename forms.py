@@ -1,6 +1,5 @@
-from flask_wtf import Form
-from wtforms import StringField
-from wtforms.validators import DataRequired
+from wtforms import Form, StringField, validators
 
-class webFizzForm(Form):
-    phonenumber = StringField('openid', validators=[DataRequired()])
+
+class PhoneForm(Form):
+    phonenumber = StringField('phonenumber', [validators.Length(min=8, max=10)])
