@@ -8,7 +8,7 @@ app = Flask(__name__)
 WTF_CSRF_ENABLED = True
 app.config.from_pyfile('config.py')
 
-
+@app.route("/")
 @app.route("/home", methods=['GET','POST'])
 def home():
     """Respond to incoming requests."""
@@ -64,8 +64,7 @@ def web_dial():
     try:
         twilio_client.calls.create(from_=app.config['TWILIO_CALLER_ID'],
                                    to=phone_number,
-                                   url=url_for('home',
-                                               _external=True))
+                                   url='/home')
     except Exception as e:
         app.logger.error(e)
         return jsonify({'error': str(e)})
