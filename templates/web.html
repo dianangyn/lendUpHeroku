@@ -1,0 +1,23 @@
+<script type="text/javascript" src="//media.twiliocdn.com/sdk/js/client/v1.3/twilio.min.js"></script>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="/static/app.js"></script>
+
+<html>
+<body>
+<h1>Call someone to play phonefizz</h1>
+  <form action="/dial" name="phoneForm" method="post">
+      <p>
+          Please enter a phone number to dial for phonefizz:<br>
+          <div>
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" placeholder="8587123456" />
+        </div>
+
+      </p>
+      <p><input type="submit" value="Call and play"></p>
+  </form>
+
+</body>
+</html>

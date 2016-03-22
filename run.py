@@ -8,8 +8,9 @@ app = Flask(__name__)
 WTF_CSRF_ENABLED = True
 app.config.from_pyfile('config.py')
 
+
 @app.route("/")
-@app.route("/home", methods=['GET','POST'])
+@app.route("/home", methods=['GET', 'POST'])
 def home():
     """Respond to incoming requests."""
     resp = twilio.twiml.Response()
@@ -17,6 +18,15 @@ def home():
     with resp.gather(finishOnKey="#", action="/beginfizz") as g:
         g.say("Please enter a number to play phonefizz then press pound.")
     return str(resp)
+
+"""
+@app.route("/play", methods=['GET','POST'])
+def play():
+    resp = twilio.twiml.Response()
+    with resp.gather(finishOnKey="#", action="/beginfizz") as g:
+        g.say("Please enter a number to play phonefizz then press pound.")
+    return str(resp)
+"""
 
 
 @app.route("/beginfizz", methods=['GET', 'POST'])
@@ -62,14 +72,14 @@ def web_dial():
         msg = 'Missing configuration variable: {0}'.format(e)
         return jsonify({'error': msg})
     try:
-        twilio_client.calls.create(from_=app.config['TWILIO_CALLER_ID'],
+        call = twilio_client.calls.create(from_=app.config['TWILIO_CALLER_ID'],
                                    to=phone_number,
-                                   url='/home')
+                                   url=url_for('.home', _external=True))
     except Exception as e:
         app.logger.error(e)
         return jsonify({'error': str(e)})
 
-    return jsonify({'message': 'Call incoming!'})
+    return jsonify({'message': 'Call incoming!', 'sid': call.sid})
 
 
 if __name__ == "__main__":
